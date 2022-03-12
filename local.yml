@@ -4,6 +4,16 @@
   become: true
 
   tasks:
-  - name: install
+  - name: install packages
     package:
       name: htop
+
+  - name: copy wallpaper file
+    copy:
+      src: files/black.jpg
+      dest: $HOME/Pictures/wallpapers.jpg
+      owner: root
+      group: root
+     
+
+  
